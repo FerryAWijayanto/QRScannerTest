@@ -1,5 +1,5 @@
 //
-//  QRScannerViewController.swift
+//  MerchantListViewController.swift
 //  QRScannerTest
 //
 //  Created by Ferry Adi Wijayanto on 11/11/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QRScannerViewController: UIViewController {
+class MerchantListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
