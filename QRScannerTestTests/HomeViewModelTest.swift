@@ -6,15 +6,74 @@
 //
 
 import XCTest
+import Combine
+
+@testable import QRScannerTest
 
 final class HomeViewModelTest: XCTestCase {
 
+    var storeMock: MerchantStoreProtocol!
+    var viewModel: HomeViewModel!
+    var cancellables: Set<AnyCancellable>!
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        storeMock = MerchantStoreMock()
+        cancellables = .init()
+        viewModel = .init(store: storeMock)
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        storeMock = nil
+        cancellables = nil
+        viewModel = nil
+    }
+
+    func testOnQRButtonDidTapped() {
+        // Given
+        let expectation = XCTestExpectation()
+        viewModel.eventNavigateToScanner
+            .sink { input in
+                expectation.fulfill()
+            }.store(in: &cancellables)
+
+        // When
+        viewModel.onQRButtonDidTapped()
+
+        // Then
+        wait(for: [expectation], timeout: 10)
+
+    }
+
+    func testOnUpdateSaldo() {
+        // Given
+        let expectation = XCTestExpectation()
+        viewModel.eventUpdateSaldo
+            .sink { saldo in
+                expectation.fulfill()
+            }.store(in: &cancellables)
+
+        // When
+        viewModel.onUpdateSaldo(saldo: 50_000)
+
+        // Then
+        wait(for: [expectation], timeout: 10)
+    }
+
+    func testOnShowMerchantListDidTapped() {
+        // Given
+        let expectation = XCTestExpectation()
+        viewModel.eventGetMerchantList
+            .sink { lists in
+                expectation.fulfill()
+            }.store(in: &cancellables)
+
+        // When
+        viewModel.onShowMerchantListDidTapped()
+
+        // Then
+        wait(for: [expectation], timeout: 10)
     }
 
     func testExample() throws {
@@ -32,4 +91,17 @@ final class HomeViewModelTest: XCTestCase {
         }
     }
 
+}
+
+final class MerchantStoreMock: MerchantStoreProtocol {
+
+    var lists: [Merchant] = []
+
+    func saveListMerchant(list: [QRScannerTest.Merchant]) {
+        lists.append(contentsOf: list)
+    }
+    
+    func getListMerchant() -> [QRScannerTest.Merchant] {
+        return lists
+    }
 }

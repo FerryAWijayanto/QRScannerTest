@@ -6,15 +6,49 @@
 //
 
 import XCTest
+import Combine
+
+@testable import QRScannerTest
 
 final class MerchantViewModelTest: XCTestCase {
 
+    var inputMock: MerchantViewModel.Input!
+    var viewModel: MerchantViewModel!
+    var cancellables: Set<AnyCancellable>!
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        var merchant: Merchant = .init()
+        merchant.id = "1"
+        merchant.merchant = "warung"
+        merchant.source = "BNI"
+        merchant.nominal = 100_000
+
+        inputMock = .init(merchantList: [merchant])
+        viewModel = .init(input: inputMock)
+        cancellables = .init()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        inputMock = nil
+        viewModel = nil
+        cancellables = nil
+    }
+
+    func testOnViewDidLoad() {
+        // Given
+        let expectation = XCTestExpectation()
+        viewModel.eventUpdateData
+            .sink { _ in
+                expectation.fulfill()
+            }.store(in: &cancellables)
+
+        // When
+        viewModel.onViewDidLoad()
+
+        // Then
+        wait(for: [expectation], timeout: 10)
     }
 
     func testExample() throws {

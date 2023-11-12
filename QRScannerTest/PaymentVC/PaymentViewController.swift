@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class PaymentViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class PaymentViewController: UIViewController {
     @IBOutlet weak var nominalValueLabel: UILabel!
 
     private let viewModel: PaymentViewModelProtocol
+    private var cancellables = Set<AnyCancellable>()
 
     init(viewModel: PaymentViewModelProtocol) {
         self.viewModel = viewModel
@@ -28,6 +30,7 @@ class PaymentViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        bindViewModel()
     }
 
     private func setupUI() {
@@ -36,8 +39,34 @@ class PaymentViewController: UIViewController {
         nominalValueLabel.text = viewModel.nominal
     }
 
+    private func bindViewModel() {
+        viewModel.eventPresentPaymentAlert
+            .sink { [weak self] (title, message) in
+                self?.showSuccessPaymentAlert(title: title, message: message)
+            }.store(in: &cancellables)
+
+        viewModel.eventNavigateBackToHome
+            .sink { [weak self] saldo in
+                self?.navigateBack(saldo: saldo)
+            }.store(in: &cancellables)
+    }
+
     @IBAction func paymentBtn(_ sender: UIButton) {
         viewModel.onPaymentDidTapped()
+    }
+
+    private func showSuccessPaymentAlert(title: String, message: String) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        let action = UIAlertAction(title: "Close", style: .default) { _ in
+            self.viewModel.onCloseButtonDidTapped()
+        }
+        alertVC.addAction(action)
+        present(alertVC, animated: true)
+    }
+
+    private func navigateBack(saldo: Double) {
+        navigationController?.popToRootViewController(saldo: saldo)
     }
 }
 

@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 protocol ScannerViewModelProtocolInput {
-//    var eventMerchantInfo: PublishSubject<PaymentViewModel.Input> { get }
     var eventMerchantInfo: PassthroughSubject<PaymentViewModel.Input, Never> { get }
 }
 
@@ -17,17 +16,23 @@ protocol ScannerViewModelProtocolOutput {
     func getQRMerchantInfo(value: String)
 }
 
-struct Merchant {
-    var id: String = ""
-    var source: String = ""
-    var merchant: String = ""
-    var transaction: String = ""
-    var nominal: Double = 0
-}
-
 typealias ScannerViewModelProtocol = ScannerViewModelProtocolInput & ScannerViewModelProtocolOutput
 
 final class ScannerViewModel: ScannerViewModelProtocol {
+
+    class Input {
+        let saldo: Double
+
+        init(saldo: Double) {
+            self.saldo = saldo
+        }
+    }
+
+    private let input: Input
+
+    init(input: Input) {
+        self.input = input
+    }
 
     var eventMerchantInfo: PassthroughSubject<PaymentViewModel.Input, Never> = .init()
 
@@ -40,7 +45,7 @@ final class ScannerViewModel: ScannerViewModelProtocol {
         merchant.merchant = components[safe: 2] ?? ""
         merchant.nominal = Double(components[safe: 3] ?? "") ?? 0
 
-        let input: PaymentViewModel.Input = .init(merchant: merchant)
+        let input: PaymentViewModel.Input = .init(merchant: merchant, saldo: input.saldo)
         eventMerchantInfo.send(input)
     }
 

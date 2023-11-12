@@ -15,11 +15,15 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
+    <key>NSCameraUsageDescription</key>
+    <string>Will use it to scan Bar code for faster check-in and check-out </string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Please allow access to save photo in your photo library</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Please allow access to save photo in your photo library</string>
 </dict>
 </plist>

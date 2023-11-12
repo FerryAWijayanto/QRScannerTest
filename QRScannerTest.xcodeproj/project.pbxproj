@@ -7,26 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4713FD102B00520A00EB29A6 /* QRScannerTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713FD0F2B00520A00EB29A6 /* QRScannerTestTests.swift */; };
+		4713FD172B00522C00EB29A6 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713FD162B00522C00EB29A6 /* HomeViewModelTest.swift */; };
+		4713FD1B2B005F7C00EB29A6 /* ScannerViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713FD1A2B005F7C00EB29A6 /* ScannerViewModelTest.swift */; };
+		4713FD1D2B0060E100EB29A6 /* PaymentViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713FD1C2B0060E100EB29A6 /* PaymentViewModelTest.swift */; };
+		4713FD1F2B0065B600EB29A6 /* MerchantViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713FD1E2B0065B600EB29A6 /* MerchantViewModelTest.swift */; };
+		4713FD212B00678700EB29A6 /* MerchantStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713FD202B00678700EB29A6 /* MerchantStoreTest.swift */; };
 		472D74D32AFF5CF200A5193F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472D74D22AFF5CF200A5193F /* AppDelegate.swift */; };
 		472D74D52AFF5CF200A5193F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472D74D42AFF5CF200A5193F /* SceneDelegate.swift */; };
-		472D74D72AFF5CF200A5193F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472D74D62AFF5CF200A5193F /* ViewController.swift */; };
-		472D74DA2AFF5CF200A5193F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472D74D82AFF5CF200A5193F /* Main.storyboard */; };
 		472D74DC2AFF5CF300A5193F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472D74DB2AFF5CF300A5193F /* Assets.xcassets */; };
 		472D74DF2AFF5CF300A5193F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472D74DD2AFF5CF300A5193F /* LaunchScreen.storyboard */; };
+		472D74F22AFF793C00A5193F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472D74F12AFF793C00A5193F /* Extension.swift */; };
+		472D74F52AFF798600A5193F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472D74F32AFF798500A5193F /* HomeViewController.swift */; };
+		472D74F62AFF798600A5193F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472D74F42AFF798500A5193F /* HomeViewController.xib */; };
+		4785893D2AFF83D3008AAE38 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785893B2AFF83D3008AAE38 /* QRScannerViewController.swift */; };
+		4785893E2AFF83D3008AAE38 /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4785893C2AFF83D3008AAE38 /* QRScannerViewController.xib */; };
+		478589402AFF83F2008AAE38 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785893F2AFF83F2008AAE38 /* ViewControllerFactory.swift */; };
+		478589422AFF8A2C008AAE38 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478589412AFF8A2C008AAE38 /* ScannerViewModel.swift */; };
+		478589442AFF8B0A008AAE38 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478589432AFF8B0A008AAE38 /* PaymentViewModel.swift */; };
+		478589472AFF8C56008AAE38 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478589452AFF8C56008AAE38 /* PaymentViewController.swift */; };
+		478589482AFF8C56008AAE38 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478589462AFF8C56008AAE38 /* PaymentViewController.xib */; };
+		478589502AFFA863008AAE38 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785894F2AFFA863008AAE38 /* HomeViewModel.swift */; };
+		478589522AFFCB00008AAE38 /* MerchantStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478589512AFFCB00008AAE38 /* MerchantStore.swift */; };
+		478589552AFFCE9D008AAE38 /* MerchantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478589532AFFCE9D008AAE38 /* MerchantListViewController.swift */; };
+		478589562AFFCE9D008AAE38 /* MerchantListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478589542AFFCE9D008AAE38 /* MerchantListViewController.xib */; };
+		4785895A2AFFCEBF008AAE38 /* MerchantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478589592AFFCEBF008AAE38 /* MerchantViewModel.swift */; };
+		4785895D2AFFD1EA008AAE38 /* MerchantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785895B2AFFD1EA008AAE38 /* MerchantCell.swift */; };
+		4785895E2AFFD1EA008AAE38 /* MerchantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4785895C2AFFD1EA008AAE38 /* MerchantCell.xib */; };
+		478589612AFFD46D008AAE38 /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478589602AFFD46D008AAE38 /* Merchant.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4713FD112B00520A00EB29A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 472D74C72AFF5CF200A5193F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 472D74CE2AFF5CF200A5193F;
+			remoteInfo = QRScannerTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4713FD0D2B00520A00EB29A6 /* QRScannerTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRScannerTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4713FD0F2B00520A00EB29A6 /* QRScannerTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerTestTests.swift; sourceTree = "<group>"; };
+		4713FD162B00522C00EB29A6 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		4713FD1A2B005F7C00EB29A6 /* ScannerViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModelTest.swift; sourceTree = "<group>"; };
+		4713FD1C2B0060E100EB29A6 /* PaymentViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModelTest.swift; sourceTree = "<group>"; };
+		4713FD1E2B0065B600EB29A6 /* MerchantViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantViewModelTest.swift; sourceTree = "<group>"; };
+		4713FD202B00678700EB29A6 /* MerchantStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantStoreTest.swift; sourceTree = "<group>"; };
 		472D74CF2AFF5CF200A5193F /* QRScannerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRScannerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		472D74D22AFF5CF200A5193F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		472D74D42AFF5CF200A5193F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		472D74D62AFF5CF200A5193F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		472D74D92AFF5CF200A5193F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		472D74DB2AFF5CF300A5193F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		472D74DE2AFF5CF300A5193F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		472D74E02AFF5CF300A5193F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		472D74F12AFF793C00A5193F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		472D74F32AFF798500A5193F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		472D74F42AFF798500A5193F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		4785893B2AFF83D3008AAE38 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		4785893C2AFF83D3008AAE38 /* QRScannerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRScannerViewController.xib; sourceTree = "<group>"; };
+		4785893F2AFF83F2008AAE38 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		478589412AFF8A2C008AAE38 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		478589432AFF8B0A008AAE38 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		478589452AFF8C56008AAE38 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		478589462AFF8C56008AAE38 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		4785894F2AFFA863008AAE38 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		478589512AFFCB00008AAE38 /* MerchantStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantStore.swift; sourceTree = "<group>"; };
+		478589532AFFCE9D008AAE38 /* MerchantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantListViewController.swift; sourceTree = "<group>"; };
+		478589542AFFCE9D008AAE38 /* MerchantListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantListViewController.xib; sourceTree = "<group>"; };
+		478589592AFFCEBF008AAE38 /* MerchantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantViewModel.swift; sourceTree = "<group>"; };
+		4785895B2AFFD1EA008AAE38 /* MerchantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantCell.swift; sourceTree = "<group>"; };
+		4785895C2AFFD1EA008AAE38 /* MerchantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantCell.xib; sourceTree = "<group>"; };
+		478589602AFFD46D008AAE38 /* Merchant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4713FD0A2B00520A00EB29A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		472D74CC2AFF5CF200A5193F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +99,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4713FD0E2B00520A00EB29A6 /* QRScannerTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				4713FD0F2B00520A00EB29A6 /* QRScannerTestTests.swift */,
+				4713FD162B00522C00EB29A6 /* HomeViewModelTest.swift */,
+				4713FD1A2B005F7C00EB29A6 /* ScannerViewModelTest.swift */,
+				4713FD1C2B0060E100EB29A6 /* PaymentViewModelTest.swift */,
+				4713FD1E2B0065B600EB29A6 /* MerchantViewModelTest.swift */,
+				4713FD202B00678700EB29A6 /* MerchantStoreTest.swift */,
+			);
+			path = QRScannerTestTests;
+			sourceTree = "<group>";
+		};
 		472D74C62AFF5CF200A5193F = {
 			isa = PBXGroup;
 			children = (
 				472D74D12AFF5CF200A5193F /* QRScannerTest */,
+				4713FD0E2B00520A00EB29A6 /* QRScannerTestTests */,
 				472D74D02AFF5CF200A5193F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				472D74CF2AFF5CF200A5193F /* QRScannerTest.app */,
+				4713FD0D2B00520A00EB29A6 /* QRScannerTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,20 +133,126 @@
 		472D74D12AFF5CF200A5193F /* QRScannerTest */ = {
 			isa = PBXGroup;
 			children = (
+				4785895F2AFFD45D008AAE38 /* Model */,
 				472D74D22AFF5CF200A5193F /* AppDelegate.swift */,
 				472D74D42AFF5CF200A5193F /* SceneDelegate.swift */,
-				472D74D62AFF5CF200A5193F /* ViewController.swift */,
-				472D74D82AFF5CF200A5193F /* Main.storyboard */,
 				472D74DB2AFF5CF300A5193F /* Assets.xcassets */,
 				472D74DD2AFF5CF300A5193F /* LaunchScreen.storyboard */,
 				472D74E02AFF5CF300A5193F /* Info.plist */,
+				472D74F12AFF793C00A5193F /* Extension.swift */,
+				478589492AFFA7F8008AAE38 /* HomeVC */,
+				4785894B2AFFA81A008AAE38 /* QRScannerVC */,
+				4785893F2AFF83F2008AAE38 /* ViewControllerFactory.swift */,
+				4785894D2AFFA839008AAE38 /* PaymentVC */,
+				478589512AFFCB00008AAE38 /* MerchantStore.swift */,
+				478589572AFFCEA2008AAE38 /* MerchantListVC */,
 			);
 			path = QRScannerTest;
+			sourceTree = "<group>";
+		};
+		478589492AFFA7F8008AAE38 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				4785894A2AFFA80F008AAE38 /* ViewModel */,
+				472D74F32AFF798500A5193F /* HomeViewController.swift */,
+				472D74F42AFF798500A5193F /* HomeViewController.xib */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		4785894A2AFFA80F008AAE38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4785894F2AFFA863008AAE38 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4785894B2AFFA81A008AAE38 /* QRScannerVC */ = {
+			isa = PBXGroup;
+			children = (
+				4785894C2AFFA829008AAE38 /* ViewModel */,
+				4785893B2AFF83D3008AAE38 /* QRScannerViewController.swift */,
+				4785893C2AFF83D3008AAE38 /* QRScannerViewController.xib */,
+			);
+			path = QRScannerVC;
+			sourceTree = "<group>";
+		};
+		4785894C2AFFA829008AAE38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				478589412AFF8A2C008AAE38 /* ScannerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4785894D2AFFA839008AAE38 /* PaymentVC */ = {
+			isa = PBXGroup;
+			children = (
+				4785894E2AFFA843008AAE38 /* ViewModel */,
+				478589452AFF8C56008AAE38 /* PaymentViewController.swift */,
+				478589462AFF8C56008AAE38 /* PaymentViewController.xib */,
+			);
+			path = PaymentVC;
+			sourceTree = "<group>";
+		};
+		4785894E2AFFA843008AAE38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				478589432AFF8B0A008AAE38 /* PaymentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		478589572AFFCEA2008AAE38 /* MerchantListVC */ = {
+			isa = PBXGroup;
+			children = (
+				478589582AFFCEB1008AAE38 /* ViewModel */,
+				478589532AFFCE9D008AAE38 /* MerchantListViewController.swift */,
+				478589542AFFCE9D008AAE38 /* MerchantListViewController.xib */,
+				4785895B2AFFD1EA008AAE38 /* MerchantCell.swift */,
+				4785895C2AFFD1EA008AAE38 /* MerchantCell.xib */,
+			);
+			path = MerchantListVC;
+			sourceTree = "<group>";
+		};
+		478589582AFFCEB1008AAE38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				478589592AFFCEBF008AAE38 /* MerchantViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4785895F2AFFD45D008AAE38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				478589602AFFD46D008AAE38 /* Merchant.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4713FD0C2B00520A00EB29A6 /* QRScannerTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4713FD132B00520A00EB29A6 /* Build configuration list for PBXNativeTarget "QRScannerTestTests" */;
+			buildPhases = (
+				4713FD092B00520A00EB29A6 /* Sources */,
+				4713FD0A2B00520A00EB29A6 /* Frameworks */,
+				4713FD0B2B00520A00EB29A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4713FD122B00520A00EB29A6 /* PBXTargetDependency */,
+			);
+			name = QRScannerTestTests;
+			productName = QRScannerTestTests;
+			productReference = 4713FD0D2B00520A00EB29A6 /* QRScannerTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		472D74CE2AFF5CF200A5193F /* QRScannerTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 472D74E32AFF5CF300A5193F /* Build configuration list for PBXNativeTarget "QRScannerTest" */;
@@ -83,6 +266,8 @@
 			dependencies = (
 			);
 			name = QRScannerTest;
+			packageProductDependencies = (
+			);
 			productName = QRScannerTest;
 			productReference = 472D74CF2AFF5CF200A5193F /* QRScannerTest.app */;
 			productType = "com.apple.product-type.application";
@@ -97,6 +282,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					4713FD0C2B00520A00EB29A6 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 472D74CE2AFF5CF200A5193F;
+					};
 					472D74CE2AFF5CF200A5193F = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -111,50 +300,89 @@
 				Base,
 			);
 			mainGroup = 472D74C62AFF5CF200A5193F;
+			packageReferences = (
+			);
 			productRefGroup = 472D74D02AFF5CF200A5193F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				472D74CE2AFF5CF200A5193F /* QRScannerTest */,
+				4713FD0C2B00520A00EB29A6 /* QRScannerTestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4713FD0B2B00520A00EB29A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		472D74CD2AFF5CF200A5193F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4785893E2AFF83D3008AAE38 /* QRScannerViewController.xib in Resources */,
 				472D74DF2AFF5CF300A5193F /* LaunchScreen.storyboard in Resources */,
+				4785895E2AFFD1EA008AAE38 /* MerchantCell.xib in Resources */,
 				472D74DC2AFF5CF300A5193F /* Assets.xcassets in Resources */,
-				472D74DA2AFF5CF200A5193F /* Main.storyboard in Resources */,
+				478589482AFF8C56008AAE38 /* PaymentViewController.xib in Resources */,
+				478589562AFFCE9D008AAE38 /* MerchantListViewController.xib in Resources */,
+				472D74F62AFF798600A5193F /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4713FD092B00520A00EB29A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4713FD1F2B0065B600EB29A6 /* MerchantViewModelTest.swift in Sources */,
+				4713FD102B00520A00EB29A6 /* QRScannerTestTests.swift in Sources */,
+				4713FD1B2B005F7C00EB29A6 /* ScannerViewModelTest.swift in Sources */,
+				4713FD212B00678700EB29A6 /* MerchantStoreTest.swift in Sources */,
+				4713FD172B00522C00EB29A6 /* HomeViewModelTest.swift in Sources */,
+				4713FD1D2B0060E100EB29A6 /* PaymentViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		472D74CB2AFF5CF200A5193F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				472D74D72AFF5CF200A5193F /* ViewController.swift in Sources */,
+				478589552AFFCE9D008AAE38 /* MerchantListViewController.swift in Sources */,
+				478589422AFF8A2C008AAE38 /* ScannerViewModel.swift in Sources */,
+				472D74F52AFF798600A5193F /* HomeViewController.swift in Sources */,
+				478589402AFF83F2008AAE38 /* ViewControllerFactory.swift in Sources */,
+				478589502AFFA863008AAE38 /* HomeViewModel.swift in Sources */,
+				4785895D2AFFD1EA008AAE38 /* MerchantCell.swift in Sources */,
+				478589442AFF8B0A008AAE38 /* PaymentViewModel.swift in Sources */,
+				4785893D2AFF83D3008AAE38 /* QRScannerViewController.swift in Sources */,
 				472D74D32AFF5CF200A5193F /* AppDelegate.swift in Sources */,
 				472D74D52AFF5CF200A5193F /* SceneDelegate.swift in Sources */,
+				478589472AFF8C56008AAE38 /* PaymentViewController.swift in Sources */,
+				4785895A2AFFCEBF008AAE38 /* MerchantViewModel.swift in Sources */,
+				472D74F22AFF793C00A5193F /* Extension.swift in Sources */,
+				478589522AFFCB00008AAE38 /* MerchantStore.swift in Sources */,
+				478589612AFFD46D008AAE38 /* Merchant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		472D74D82AFF5CF200A5193F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				472D74D92AFF5CF200A5193F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		4713FD122B00520A00EB29A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 472D74CE2AFF5CF200A5193F /* QRScannerTest */;
+			targetProxy = 4713FD112B00520A00EB29A6 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		472D74DD2AFF5CF300A5193F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -166,6 +394,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4713FD142B00520A00EB29A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54C3B64XTA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ferry.QRScannerTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QRScannerTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QRScannerTest";
+			};
+			name = Debug;
+		};
+		4713FD152B00520A00EB29A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54C3B64XTA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ferry.QRScannerTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QRScannerTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QRScannerTest";
+			};
+			name = Release;
+		};
 		472D74E12AFF5CF300A5193F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -300,6 +566,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +595,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +612,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4713FD132B00520A00EB29A6 /* Build configuration list for PBXNativeTarget "QRScannerTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4713FD142B00520A00EB29A6 /* Debug */,
+				4713FD152B00520A00EB29A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		472D74CA2AFF5CF200A5193F /* Build configuration list for PBXProject "QRScannerTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -9,9 +9,15 @@ import UIKit
 
 class MerchantCell: UITableViewCell {
 
+    @IBOutlet weak var idValueLabel: UILabel!
+    @IBOutlet weak var merchantValueLabel: UILabel!
+    @IBOutlet weak var nominalValueLabel: UILabel!
+
+    static let identifier = "MerchantCell"
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = .white
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -19,5 +25,11 @@ class MerchantCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
+    func set(merchant: Merchant) {
+        idValueLabel.text = merchant.id
+        merchantValueLabel.text = merchant.merchant
+        nominalValueLabel.text = merchant.nominal.formatCurrenyIDR()
+    }
+
 }

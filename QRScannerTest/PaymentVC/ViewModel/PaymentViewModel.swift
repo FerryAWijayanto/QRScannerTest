@@ -12,7 +12,8 @@ protocol PaymentViewModelProtocolInput {
     var id: String { get }
     var merchant: String { get }
     var nominal: String { get }
-    var eventPresentSuccessPayment: PassthroughSubject<Void, Never> { get }
+    var eventPresentPaymentAlert: PassthroughSubject<(String, String), Never> { get }
+    var eventNavigateBackToHome: PassthroughSubject<Double, Never> { get }
 }
 
 protocol PaymentViewModelProtocolOutput {
@@ -39,25 +40,51 @@ final class PaymentViewModel: PaymentViewModelProtocol {
 
     class Input {
         let merchant: Merchant
+        let saldo: Double
 
-        init(merchant: Merchant) {
+        init(merchant: Merchant, saldo: Double) {
             self.merchant = merchant
+            self.saldo = saldo
         }
     }
 
     private let input: Input
+    private let store: MerchantStoreProtocol
 
-    let eventPresentSuccessPayment: PassthroughSubject<Void, Never> = .init()
+    private var newSaldo: Double {
+        input.saldo - input.merchant.nominal
+    }
 
-    init(input: Input) {
+    let eventPresentPaymentAlert: PassthroughSubject<(String, String), Never> = .init()
+    let eventNavigateBackToHome: PassthroughSubject<Double, Never> = .init()
+
+    init(input: Input, store: MerchantStoreProtocol) {
         self.input = input
+        self.store = store
     }
 
     func onPaymentDidTapped() {
-        eventPresentSuccessPayment.send(())
+        var lists = store.getListMerchant()
+        if newSaldo >= 0 {
+            var merchant: Merchant = .init()
+            merchant.id = input.merchant.id
+            merchant.merchant = input.merchant.merchant
+            merchant.nominal = input.merchant.nominal
+            merchant.source = input.merchant.source
+
+            lists.append(merchant)
+            store.saveListMerchant(list: lists)
+            eventPresentPaymentAlert.send(("Success", "Payment success"))
+        } else {
+            eventPresentPaymentAlert.send(("Failed", "Payment failed"))
+        }
     }
 
     func onCloseButtonDidTapped() {
-        
+        if newSaldo >= 0 {
+            eventNavigateBackToHome.send(newSaldo)
+        } else {
+            eventNavigateBackToHome.send(0)
+        }
     }
 }
